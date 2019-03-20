@@ -15,8 +15,8 @@ class FiveDayForecast extends React.Component<any, any> {
             <div className="five-day-container">
                 <span>
                     {
-                        weather.map (day: any => (
-                            <SingleDayForecast key={day.name} data={[]}></SingleDayForecast>
+                        weather.map ((day: any) => (
+                            <SingleDayForecast key={day.name} data={day}></SingleDayForecast>
 
                         ))
                     }
