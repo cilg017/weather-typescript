@@ -48,7 +48,10 @@ Okay! So let's get this rockin' and rolling from scratch.
 
 * Make a directory and run `npm install create-react-app`
 * Next let's create the repo. `npx create-react-app <app-name> --typescript`. This is when I pushed up my initial commit https://github.com/cilg017/weather-typescript/commit/a21f5351e90f532dafcd73e38200fcb0ac5fbdcb
-* Install dependencies `npm install --save react-redux``npm install --save-dev @types/react-redux``npm install --save redux-thunk`
+* Install dependencies 
+ `npm install --save react-redux`
+ `npm install --save-dev @types/react-redux`
+ `npm install --save redux-thunk`
 ## Store Setup
 
 * We need actions, a reducer, a provider, a store, an app container! See my commit https://github.com/cilg017/weather-typescript/commit/dd516593aba321be4efe9aa800878bb245e4502e
