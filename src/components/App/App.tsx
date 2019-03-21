@@ -5,14 +5,19 @@ import InputForm from '../input-form/InputForm';
 import SingleDayForecast from '../single-day-forecast/SingleDayForecast';
 
 class App extends React.Component<any, any> { //props, state
+
   render() {
+
     return (
       <div className="App">
-        {/* <header className="App-header">
-          <h1 onClick={() => this.props.test()}>{this.props.weather.name}</h1>
-        </header> */}
-        <InputForm />
-        <FiveDayForecast weather={
+
+        <InputForm handleSubmit={(e) => {
+          e.preventDefault();
+          this.props.fetchWeather(e.target.query.value);
+          }}/>
+
+
+        {/* <FiveDayForecast weather={
           [
             {
               name: 'carly',
@@ -30,7 +35,8 @@ class App extends React.Component<any, any> { //props, state
               low: 20
             }
           ]}>
-          </FiveDayForecast>
+          </FiveDayForecast> */}
+          <SingleDayForecast data={this.props.weather.singleDayForecast} showCurrentTemp={true}></SingleDayForecast>
       </div>
     );
   }
