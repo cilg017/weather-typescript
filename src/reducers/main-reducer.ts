@@ -1,12 +1,16 @@
-export function reducer(state: any = {name: 'john', data: {}}, action?: any) {
+export function reducer(state: any = {}, action?: any) {
+    console.log('action', action);
     switch (action.type) {
-        case 'test':
-            return {...state, name: action.payload.name}
         case 'fetchWeather':
             return {
                 ...state,
                 singleDayForecast: action.payload
                 }
+        case 'fetchFiveDayWeather':
+            return {
+                ...state,
+                fiveDayForecast: action.payload.list
+            }
         default:
             return state;
     }

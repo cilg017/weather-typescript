@@ -12,7 +12,7 @@ class FiveDayForecast extends React.Component<any, any> {
                 <span>
                     {
                         weather ? weather.map ((day: any) => (
-                            <SingleDayForecast key={day.name} data={day} showCurrentTemp={false}></SingleDayForecast>
+                            <SingleDayForecast key={day.name} data={day} showCurrentTemp={false} name={'chicago'}></SingleDayForecast>
                         )) : null
                     }
                 </span>

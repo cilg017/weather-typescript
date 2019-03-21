@@ -14,28 +14,12 @@ class App extends React.Component<any, any> { //props, state
         <InputForm handleSubmit={(e) => {
           e.preventDefault();
           this.props.fetchWeather(e.target.query.value);
+          this.props.fetchFiveDayWeather(e.target.query.value);
           }}/>
 
 
-        {/* <FiveDayForecast weather={
-          [
-            {
-              name: 'carly',
-              high: 10,
-              low: 1
-            },
-            {
-              name: 'carly1',
-              high: 11,
-              low: 2
-            },
-            {
-              name: 'carly2',
-              high: 40,
-              low: 20
-            }
-          ]}>
-          </FiveDayForecast> */}
+        <FiveDayForecast weather={this.props.weather.fiveDayForecast}>
+          </FiveDayForecast>
           <SingleDayForecast data={this.props.weather.singleDayForecast} showCurrentTemp={true}></SingleDayForecast>
       </div>
     );
